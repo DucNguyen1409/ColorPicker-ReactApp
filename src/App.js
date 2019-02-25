@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       color : 'red',
-      fontsize : 18
+      fontsize : 15
     }
   }
   onSetColor = (param) =>{
@@ -24,7 +24,7 @@ class App extends Component {
   ChangeSize=(number)=>{
     console.log(number)
     //size: 8 =< font =< 30
-    if(this.state.fontsize + number >= 8 && this.state.fontsize + number <= 20) {
+    if(this.state.fontsize + number >= 15 && this.state.fontsize + number <= 30) {
       this.setState({
         fontsize : this.state.fontsize + number
       });
