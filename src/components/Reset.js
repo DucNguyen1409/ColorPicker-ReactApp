@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 
 class Reset extends Component { 
 
+  ResetDefault=()=>{
+     this.props.ResetDefault(true);
+  }
+
   render() {
     return (
-        <button type="button" className="btn btn-default">Reset All</button> 
+        <button type="button" className="btn btn-default" onClick={this.ResetDefault}>Reset All</button> 
     );
   }
 }

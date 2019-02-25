@@ -33,8 +33,14 @@ class App extends Component {
         fontsize: this.state.fontsize
       });
     }
-
   }
+
+  SettingDefault=(value)=>{
+    this.setState({
+      color: "red",
+      fontsize: 15
+    })
+  } 
 
   render() {
     return (
@@ -47,7 +53,7 @@ class App extends Component {
                 fontsize={ this.state.fontsize }
                 ChangeSizeChild={this.ChangeSize}
               />
-              <Reset />  
+              <Reset ResetDefault={ this.SettingDefault }/>  
             </div>        
               <Result color={this.state.color} fontsize={ this.state.fontsize }/>            
           </div>
